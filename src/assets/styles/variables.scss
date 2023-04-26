@@ -1,0 +1,29 @@
+$padding: 8px;
+$border-radius: 8px;
+
+$title-xl: 56px;
+$title-md: 48px;
+$title-sm: 32px;
+
+$text-xl: 20px;
+$text-md: 18px;
+$text-sm: 14px;
+
+$nav-text-xl: 15px;
+$nav-text-md: 13px;
+$nav-text-sm: 11px;
+
+$button-text-xl: 20px;
+$button-text-md: 16px;
+
+$grid-laptop-xl: repeat(12, minmax(64px, 64px));
+$grid-laptop-gap-xl: 32px;
+
+$grid-laptop: repeat(12, minmax(56px, 56px));
+$grid-laptop-gap: 20px;
+
+$grid-tablet: repeat(8, minmax(48px, 48px));
+$grid-tablet-gap: 40px;
+
+$grid-mobile: repeat(6, minmax(40px, 40px));
+$grid-mobile-gap: 20px;

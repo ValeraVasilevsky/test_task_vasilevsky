@@ -1,0 +1,46 @@
+.app {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  grid-template-rows: min-content;
+  height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .app {
+    grid-template-columns: $grid-laptop-xl;
+    column-gap: $grid-laptop-gap-xl;
+    padding: $padding * 4;
+
+    &__chart {
+      grid-column: 1 / 9;
+    }
+    &__base-button {
+      grid-column: 9 / 13;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1339px) {
+  .app {
+    grid-template-columns: $grid-laptop;
+    column-gap: $grid-laptop-gap;
+    padding: $padding * 3;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .app {
+    grid-template-columns: $grid-tablet;
+    column-gap: $grid-tablet-gap;
+    padding: $padding * 2;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .app {
+    grid-template-columns: $grid-mobile;
+    column-gap: $grid-mobile-gap;
+    padding: $padding;
+  }
+}

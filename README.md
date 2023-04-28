@@ -6,7 +6,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-Используемые ресурсы: Vue 3 + Vite.
+Используемые ресурсы: Vue 3 + Vite, SASS.
 Используемые сторонние библиотеки: Axios, Chart JS, Pinia.
 
 Команда, запускающая проект в dev режиме: npm run dev.

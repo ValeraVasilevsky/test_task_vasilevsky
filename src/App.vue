@@ -18,23 +18,30 @@ import { ref } from "vue";
 const isLoading = ref(false);
 const iconName = ref("play");
 const { getChartData } = useChartStore();
+const intervalId = ref(null);
+const intervalTimer = ref(5000);
 
-const startLoading = async () => {
+const stopLoading = () => {
   try {
-    isLoading.value = true;
-    iconName.value = "loading";
-
-    const chartData = await getChartData();
-  } catch (e) {
-    console.error(e.message);
-    iconName.value = "play";
-  } finally {
+    clearInterval(intervalId.value);
     isLoading.value = false;
+    iconName.value = "play";
+  } catch (error) {
+    console.error(error.message);
   }
 };
-const stopLoading = () => {
-  isLoading.value = false;
-  iconName.value = "play";
+
+const startLoading = async () => {
+  isLoading.value = true;
+  iconName.value = "pause";
+  intervalId.value = setInterval(async () => {
+    try {
+      await getChartData();
+    } catch (error) {
+      stopLoading();
+      alert(error.message);
+    }
+  }, intervalTimer.value);
 };
 </script>
 

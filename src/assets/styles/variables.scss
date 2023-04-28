@@ -23,7 +23,8 @@ $grid-laptop: repeat(12, minmax(56px, 56px));
 $grid-laptop-gap: 20px;
 
 $grid-tablet: repeat(8, minmax(48px, 48px));
+$grid-tablet-rows: repeat(6, 1fr);
 $grid-tablet-gap: 40px;
 
 $grid-mobile: repeat(6, minmax(40px, 40px));
-$grid-mobile-gap: 20px;
+$grid-mobile-rows: repeat(6, 1fr);

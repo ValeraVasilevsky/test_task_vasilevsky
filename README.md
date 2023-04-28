@@ -12,3 +12,5 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 Команда, запускающая проект в dev режиме: npm run dev.
 Команда, собирающая проект для prod режима: npm run build.
 Команда, запускающая проект в prod режиме: npm run preview;
+
+Для запуска проекта необходимо клонировать репозиторий на свой ПК, войти в папку с проектом, выполнить команду в консоли npm i (npm install)

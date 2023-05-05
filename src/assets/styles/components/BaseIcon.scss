@@ -1,0 +1,16 @@
+.base-icon {
+  &__loader {
+    &_active {
+      animation: spinner linear 1s infinite;
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

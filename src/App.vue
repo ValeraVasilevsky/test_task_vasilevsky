@@ -10,38 +10,36 @@
 </template>
 
 <script setup>
+import { TIMER } from "@/constants/timer";
 import { useChartStore } from "@/store/chart";
 import BaseButton from "@components/BaseButton.vue";
 import Chart from "@components/Chart.vue";
 import { ref } from "vue";
 
+const { getChartData } = useChartStore();
+
+const intervalId = ref(null);
 const isLoading = ref(false);
 const iconName = ref("play");
-const { getChartData } = useChartStore();
-const intervalId = ref(null);
-const intervalTimer = ref(5000);
 
 const stopLoading = () => {
-  try {
-    clearInterval(intervalId.value);
-    isLoading.value = false;
-    iconName.value = "play";
-  } catch (error) {
-    console.error(error.message);
-  }
+  clearInterval(intervalId.value);
+  isLoading.value = false;
+  iconName.value = "play";
 };
 
 const startLoading = async () => {
   isLoading.value = true;
-  iconName.value = "pause";
+  iconName.value = "loader";
   intervalId.value = setInterval(async () => {
     try {
+      iconName.value = "pause";
       await getChartData();
     } catch (error) {
       stopLoading();
       alert(error.message);
     }
-  }, intervalTimer.value);
+  }, TIMER);
 };
 </script>
 
